@@ -1,11 +1,12 @@
 {
   "name": "cosf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compressed Object Storage Format",
   "main": "cosf.js",
   "scripts": {
     "start": "node cosf.js"
   },
+  "repository": "https://github.com/Hobgoblin101/cosf",
   "author": "Ajani James Bilby",
   "license": "ISC"
 }
