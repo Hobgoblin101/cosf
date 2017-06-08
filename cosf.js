@@ -1,5 +1,5 @@
 var reference = require('./reference.js');
-var radix = new (require('custom-radix'))();
+var radix = new (require('custom-radix'))('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_-+={[]}|\\:;"\'<,>.?/');
 var cosf = {
   banFunctions: false
 };
