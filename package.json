@@ -1,6 +1,6 @@
 {
   "name": "cosf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compressed Object Storage Format",
   "main": "cosf.js",
   "scripts": {
@@ -8,5 +8,8 @@
   },
   "repository": "https://github.com/Hobgoblin101/cosf",
   "author": "Ajani James Bilby",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "custom-radix": "^1.0.3"
+  }
 }
