@@ -18,7 +18,13 @@ var char = {
   headerEnd: String.fromCharCode(9),
 };
 
-cosf.encode = function(data){
+
+/**
+ * Encode object data to compact string
+ * @param {object} data
+ * @return {string}
+ */
+function Encode(data){
   var header = new Buffer('');
   var values = new Buffer('');
   var isArray = Array.isArray(data);
@@ -99,7 +105,15 @@ cosf.encode = function(data){
 
   return header + char.headerEnd + values;
 };
-cosf.decode = function(buffer, isLooping){
+
+/**
+ * Decode cosf encoding
+ * @param {string} buffer
+ * @param {boolean} isLooping
+ * @return {object}
+ */
+function Decode(buffer, isLooping){
+	buffer = buffer.toString();
 
 	if (buffer[0] === char.headerEnd){
 		return {};
@@ -226,5 +240,8 @@ cosf.decode = function(buffer, isLooping){
     return reference.join(obj);
   }
 };
+
+cosf.encode = Encode;
+cosf.decode = Decode;
 
 module.exports = cosf;

@@ -11,6 +11,6 @@
   "author": "Ajani James Bilby",
   "license": "ISC",
   "dependencies": {
-    "custom-radix": "^1.0.3"
+    "custom-radix": "^1.0.4"
   }
 }
