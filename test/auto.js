@@ -24,7 +24,7 @@ var data;
 
 data = cosf.encode(blob);
 var json = JSON.stringify(blob);
-console.log('Compression:', Math.floor(data.length/json.length*100, 2) + '%');
+console.log('Compression:', Math.floor(100 - data.length/json.length*100, 2) + '% smaller');
 
 
 console.log('_____________________________\n');
