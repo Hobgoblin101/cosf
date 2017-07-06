@@ -1,5 +1,6 @@
-var reference = require('./reference.js');
+var reference = require('./component/reference.js');
 var radix = new (require('custom-radix'))('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_-+={[]}|\\:;"\'<,>.?/');
+
 var cosf = {
   banFunctions: false
 };
@@ -99,6 +100,11 @@ cosf.encode = function(data){
   return header + char.headerEnd + values;
 };
 cosf.decode = function(buffer, isLooping){
+
+	if (buffer[0] === char.headerEnd){
+		return {};
+	}
+
   var obj = {};
 
   var isArray;
